@@ -9,14 +9,18 @@ body {
 }
 
 :root {
-    --sidebar-bg-color: rgba(160, 160, 160, 0.45)
+    --text-highlight-color: plum;
+    --form-bg-color: rgb(250, 250, 250);
 }
 
 .container,
 .sidebar-box,
 .information-box,
 .logo-box,
-.credits {
+.credits,
+.form-box,
+#sign-up-form,
+.form-row {
     display: flex;
 }
 
@@ -30,6 +34,8 @@ body {
     height: 100vh;
 }
 
+/* Sidebar/Banner Layout */
+
 .sidebar-box {
     width: clamp(275px, 30%, 400px);
     background: url("../images/background.jpg");
@@ -41,29 +47,86 @@ body {
 .credits {
     width: 100%;
     justify-content: center;
-    background-color: var(--sidebar-bg-color);
-    color: rgba(240, 240, 240);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(235, 235, 235);
 }
 
 .logo-box {
-    font: 3em "galahad", sans-serif;
+    font: 1.3rem "galahad", sans-serif;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 5rem;
     padding: 10px 0px;
-    gap: 0.3em;
+    gap: 0.3rem;
 }
 
 .logo-box > img {
     height: 75px;
 }
 
+.logo-box span {
+    color: var(--text-highlight-color);
+}
+
 .credits {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     position: absolute;
     bottom: 0;
 }
 
-.information-box {
+a {
+    text-decoration: none;
+    color: var(--text-highlight-color);
+}
+
+/* Information/Form Layout */
+
+.information-box,
+.form-box,
+.form-bottom {
     flex: 1;
+}
+
+.form-header,
+.form-box,
+.form-bottom {
+    padding: 2rem;
+}
+
+.form-header,
+.form-bottom {
+    background-color: var(--form-bg-color);
+}
+
+.form-header p {
+    font-size: 1.2rem;
+    width: 80%;
+}
+.form-header i {
+    color: var(--text-highlight-color);
+}
+
+#sign-up-form,
+.form-box {
+    flex-flow: column wrap;
+}
+
+.form-box {
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.585);
+    position: relative;
+}
+
+.form-row {
+    font-size: 0.85rem;
+    gap: 1rem;
+    margin: 10px 0px;
+}
+
+.form-row > label, input {
+    display: block;
+}
+
+.form-row > input {
+    width: clamp(200px, 30%, 300px)
 }

@@ -15,7 +15,7 @@
         <div class="sidebar-box">
             <div class="logo-box">
                 <img src="images/odin-lined.png" alt="The Odin Project logo">
-                <p>Sunset Streets</p>
+                <h1><span>S</span>un<span>s</span>et <span>S</span>treet<span>s</span></h1>
             </div>
             <div class="credits">
                 <p>Photo by <a href="https://unsplash.com/photos/F03eeyLmLVA">Bjarne Vijfvinkel</a> on <a
@@ -24,18 +24,56 @@
         </div>
         <div class="information-box">
             <div class="form-header">
-                Form Header Here
+                <div>
+                    <p>Have you always wanted a picturesque location for your vacation? A place that's so beautiful you
+                        could cry? Well, this is <em>not</em> the place! Here at <i>Sunset Streets</i> we strive to
+                        bring you a vacation that you will never forget! <s>Because you will hate us and this place, and
+                            you will never want to come back!</s></p>
+                    <p><br>Your dream vacation is just one inquiry away! <i>Sign up</i> today!</p>
+                </div>
             </div>
             <div class="form-box">
-                <form action="">
-                    Form Box Here
+                <p>Your unforgettable vacation starts here!</p>
+                <form id="sign-up-form" action="#" method="post">
+                    <div class="form-row">
+                        <label for="first-name">
+                            First Name
+                            <input type="text" name="first-name" id="first-name" placeholder="Apple" required>
+                        </label>
+                        <label for="last-name">
+                            Last Name
+                            <input type="text" name="last-name" id="last-name" placeholder="Bees" required>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">
+                            E-mail Address
+                            <input type="email" name="email" id="email" placeholder="Apple@Bees.com" required>
+                        </label>
+                        <label for="phone">
+                            Phone Number
+                            <input type="tel" name="phone" id="phone" placeholder="8335" required>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label for="password">
+                            Password
+                            <input type="password" name="password" id="password" placeholder="***" required>
+                        </label>
+                        <label for="pwd-confirm">
+                            Confirm Password
+                            <input type="password" name="pwd-confirm" id="pwd-confirm" placeholder="***">
+                        </label>
+                    </div>
                 </form>
             </div>
             <div class="form-bottom">
-                Form Bottom Here
+                <button class="submit-button" type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in here!</a></p>
             </div>
             <div class="form-footer">
-                <footer>Form Footer Here</footer>
+                <footer>Remi de la Vega on <a href="https://github.com/RemiOhMy/project-sign-up-form">GitHub</a>
+                </footer>
             </div>
         </div>
     </div>

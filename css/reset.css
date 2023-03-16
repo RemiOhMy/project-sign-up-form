@@ -1,15 +1,18 @@
 /* From Andy Bell - https://andy-bell.co.uk/a-modern-css-reset */
 
-/* Added padding reset */
+/* Added padding reset, moved margin reset to all */
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  /* Remove default padding */
+  padding: 0;
 }
 
-/* Remove default margin */
+/* Remove default margin
 body,
 h1,
 h2,
@@ -20,10 +23,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
-  /* Remove default padding */
-  padding: 0;
-}
+} */
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
