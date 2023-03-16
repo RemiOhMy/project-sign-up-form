@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "galahad";
+    src: url("../fonts/GalahadStd Regular.otf");
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+}
+
+:root {
+    --sidebar-bg-color: rgba(160, 160, 160, 0.45)
+}
+
+.container,
+.sidebar-box,
+.information-box,
+.logo-box,
+.credits {
+    display: flex;
+}
+
+.sidebar-box,
+.information-box {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.container {
+    height: 100vh;
+}
+
+.sidebar-box {
+    width: clamp(275px, 30%, 400px);
+    background: url("../images/background.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.logo-box,
+.credits {
+    width: 100%;
+    justify-content: center;
+    background-color: var(--sidebar-bg-color);
+    color: rgba(240, 240, 240);
+}
+
+.logo-box {
+    font: 3em "galahad", sans-serif;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2em;
+    padding: 10px 0px;
+    gap: 0.3em;
+}
+
+.logo-box > img {
+    height: 75px;
+}
+
+.credits {
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 0;
+}
+
+.information-box {
+    flex: 1;
+}
