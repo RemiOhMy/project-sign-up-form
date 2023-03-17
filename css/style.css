@@ -157,7 +157,7 @@ input {
     color: var(--invalid-color);
 }
 
-input:valid {
+input:valid:not(:placeholder-shown) {
     border-color: var(--valid-color);
 }
 
