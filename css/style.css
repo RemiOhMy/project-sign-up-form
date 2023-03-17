@@ -24,6 +24,7 @@ body {
 .credits,
 .form-box,
 .form-row,
+.form-bottom,
 #sign-up-form {
     display: flex;
 }
@@ -122,7 +123,7 @@ a {
     position: relative;
 }
 
-.form-box > p:last-of-type {
+.form-box>p:last-of-type {
     font-size: 0.85rem;
 }
 
@@ -174,4 +175,40 @@ input:focus {
     transition: ease-in-out 0.3s;
     border: 2px solid var(--input-focus-color);
     box-shadow: 0 3px 5px var(--box-shadow-color);
+}
+
+.form-bottom {
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+.form-bottom>p {
+    font-size: 0.85rem;
+}
+
+.submit-button {
+    font-size: 1.3rem;
+    transition: ease-in-out 0.3s;
+    background-color: var(--text-highlight-color);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    padding: 5px 10px;
+    box-shadow: 0 3px 3px var(--box-shadow-color);
+}
+
+.submit-button:hover {
+    transition: ease-in-out 0.3s;
+    transform: scale(1.1);
+}
+
+.submit-button:active {
+    transition: ease-in-out 0.1s;
+    transform: scale(1);
+}
+
+.form-footer {
+    font-size: 0.75rem;
+    text-align: center;
 }
