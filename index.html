@@ -34,35 +34,40 @@
             </div>
             <div class="form-box">
                 <p>Your unforgettable vacation starts here!</p>
+                <p>Required fields are marked with an asterisk (*)</p>
                 <form id="sign-up-form" action="#" method="post">
                     <div class="form-row">
                         <label for="first-name">
-                            First Name
+                            First Name *
                             <input type="text" name="first-name" id="first-name" placeholder="Apple" required>
                         </label>
                         <label for="last-name">
-                            Last Name
+                            Last Name *
                             <input type="text" name="last-name" id="last-name" placeholder="Bees" required>
                         </label>
                     </div>
                     <div class="form-row">
                         <label for="email">
-                            E-mail Address
+                            E-mail Address *
                             <input type="email" name="email" id="email" placeholder="Apple@Bees.com" required>
+                            <p class="error-message">Please enter a valid e-mail format! (e.g. name@url.com)</p>
                         </label>
                         <label for="phone">
-                            Phone Number
-                            <input type="tel" name="phone" id="phone" placeholder="8335" required>
+                            Phone Number (Optional)
+                            <input type="tel" name="phone" id="phone" placeholder="8335" pattern="\d{10}">
+                            <p class="error-message">Please enter a valid 10 digit number!</p>
                         </label>
                     </div>
                     <div class="form-row">
                         <label for="password">
-                            Password
-                            <input type="password" name="password" id="password" placeholder="***" required>
+                            Password *
+                            <input type="password" name="password" id="password" placeholder="***" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                            <p class="error-message">Password requires at least one lowercase, one uppercase, and one number!</p>
                         </label>
                         <label for="pwd-confirm">
-                            Confirm Password
-                            <input type="password" name="pwd-confirm" id="pwd-confirm" placeholder="***">
+                            Confirm Password *
+                            <input type="password" name="pwd-confirm" id="pwd-confirm" placeholder="***" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
+                            <p class="error-message">Password requires at least one lowercase, one uppercase, and one number!</p>
                         </label>
                     </div>
                 </form>

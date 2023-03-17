@@ -11,6 +11,10 @@ body {
 :root {
     --text-highlight-color: plum;
     --form-bg-color: rgb(250, 250, 250);
+    --invalid-color: rgb(255, 45, 45);
+    --valid-color: rgb(0, 200, 0);
+    --box-shadow-color: gray;
+    --input-focus-color: rgb(28, 162, 245);
 }
 
 .container,
@@ -19,8 +23,8 @@ body {
 .logo-box,
 .credits,
 .form-box,
-#sign-up-form,
-.form-row {
+.form-row,
+#sign-up-form {
     display: flex;
 }
 
@@ -37,7 +41,7 @@ body {
 /* Sidebar/Banner Layout */
 
 .sidebar-box {
-    width: clamp(275px, 30%, 400px);
+    width: clamp(275px, 30%, 500px);
     background: url("../images/background.jpg");
     background-size: cover;
     position: relative;
@@ -61,7 +65,7 @@ body {
     gap: 0.3rem;
 }
 
-.logo-box > img {
+.logo-box>img {
     height: 75px;
 }
 
@@ -103,6 +107,7 @@ a {
     font-size: 1.2rem;
     width: 80%;
 }
+
 .form-header i {
     color: var(--text-highlight-color);
 }
@@ -117,16 +122,56 @@ a {
     position: relative;
 }
 
+.form-box > p:last-of-type {
+    font-size: 0.85rem;
+}
+
 .form-row {
     font-size: 0.85rem;
     gap: 1rem;
     margin: 10px 0px;
 }
 
-.form-row > label, input {
+.form-row>label {
+    flex-direction: column;
+}
+
+label,
+input {
     display: block;
 }
 
-.form-row > input {
-    width: clamp(200px, 30%, 300px)
+input {
+    padding: 3px 5px;
+    width: 300px;
+    margin-bottom: 1rem;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+}
+
+.error-message {
+    display: none;
+    font-weight: bold;
+    color: var(--invalid-color);
+}
+
+input:valid {
+    border-color: var(--valid-color);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--invalid-color);
+}
+
+input:invalid:focus:not(:placeholder-shown)~.error-message {
+    display: block;
+    position: absolute;
+    font-size: 0.75rem;
+}
+
+input:focus {
+    outline: 0;
+    transition: ease-in-out 0.3s;
+    border: 2px solid var(--input-focus-color);
+    box-shadow: 0 3px 5px var(--box-shadow-color);
 }
